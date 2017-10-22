@@ -12,10 +12,10 @@ import static android.R.attr.id;
 
 
 public class MainActivity extends AppCompatActivity {
-//  Declared All the Objects of layout elements
+    //  Declared All the Objects of layout elements
     ProgressBar progress1, progress2, progress3;
     Button clickMe;
-    LoadProgressbarTask task1,task2,task3;
+    LoadProgressbarTask task1, task2, task3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +33,9 @@ public class MainActivity extends AppCompatActivity {
                 progress2.setProgress(0);
                 progress3.setProgress(0);
                 //Initialising the Async task
-                task1=new LoadProgressbarTask(progress1);
-                task2=new LoadProgressbarTask(progress2);
-                task3=new LoadProgressbarTask(progress3);
+                task1 = new LoadProgressbarTask(progress1);
+                task2 = new LoadProgressbarTask(progress2);
+                task3 = new LoadProgressbarTask(progress3);
 
                 // To execute all the threads in parallel
                 task1.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
@@ -47,8 +47,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Method which initialises all the objects of the elements
-    public void initializeID(){
-        clickMe=(Button)findViewById(R.id.button);
+    public void initializeID() {
+        clickMe = (Button) findViewById(R.id.button);
         progress1 = (ProgressBar) findViewById(R.id.progressBar);
         progress2 = (ProgressBar) findViewById(R.id.progressBar2);
         progress3 = (ProgressBar) findViewById(R.id.progressBar3);
